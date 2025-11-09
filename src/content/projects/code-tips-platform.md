@@ -15,7 +15,7 @@ skills:
 demoLink: "https://codetips.cloud"
 ---
 
-## About Code Tips
+## CN Example
 
 Code Tips is a community-driven platform designed to help developers share, discover, and manage code snippets efficiently. Built with the philosophy that knowledge sharing accelerates learning, it provides a centralized repository for code examples across multiple programming languages.
 
