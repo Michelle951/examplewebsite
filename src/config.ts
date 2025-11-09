@@ -10,7 +10,7 @@ import { Code } from "astro:components";
 
 /**
  * Social media links configuration
- */
+ 
 export interface SocialLinks {
   github?: string;
   linkedin?: string;
@@ -19,7 +19,7 @@ export interface SocialLinks {
   instagram?: string;
   youTube?: string;
   codetips?: string;
-}
+}*/
 
 /**
  * Extra link configuration for FAB component
@@ -80,8 +80,8 @@ export interface SiteConfig {
   location: string;
   /** Contact email */
   email: string;
-  /** Social media profile links */
-  socialLinks: SocialLinks;
+  /** Social media profile links 
+  socialLinks: SocialLinks;*/
   /** Enable ThemeSelector (dropdown) instead of ThemeToggle (checkbox) */
   enableThemeSelector: boolean;
   /** Extra links configuration for FAB component */
@@ -95,14 +95,14 @@ export interface SiteConfig {
  * Update these values to customize your portfolio
  */
 export const siteConfig: SiteConfig = {
-  name: "🌻 Bloomfolio",
-  title: "Astro Portfolio Template built with 🌼 DaisyUI",
+  name: "Michelle 🌻",
+  title: "I turn complex products into user-friendly documentation that reduces support load and accelerates product adoption.",
   description:
-    "A modern, responsive, and customizable portfolio template built with Astro and DaisyUI. Perfect for developers, designers, and creatives to showcase their work and skills.",
+    "Here I share my learning notes on Linux, HTML, and Kubernetes, flavoured with some personal reflections and documentation showcases.",
   avatar: "../assets/bloomfolio.png",
-  location: "🇧🇷 Brazil",
+  location: "🇨🇳 Hangzhou, China",
   email: "hello@example.com",
-  socialLinks: {
+  /*socialLinks: {
     github: "https://github.com/lauroguedes",
     linkedin: "https://linkedin.com/in/lauroguedes",
     twitter: "https://twitter.com/leowg",
@@ -110,7 +110,7 @@ export const siteConfig: SiteConfig = {
     instagram: "https://instagram.com/lauroguedes.dev",
     youTube: "https://youtube.com/leowgweb",
     codetips: "https://codetips.cloud/u/lauroguedes",
-  },
+  }, */
   enableThemeSelector: true,
   extraLinks: {
     enable: true,
@@ -140,10 +140,10 @@ export const siteConfig: SiteConfig = {
   sections: {
     about: true,
     projects: true,
-    blog: true,
-    work: true,
-    education: true,
-    hackathons: true,
-    contact: true,
+    blog: false,
+    work: false,
+    education: false,
+    hackathons: false,
+    contact: false,
   },
 };
