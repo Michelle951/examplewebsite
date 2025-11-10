@@ -98,7 +98,7 @@ export const siteConfig: SiteConfig = {
   name: "Michelle 🌻",
   title: "I turn complex products into user-friendly documentation that reduces support load and accelerates product adoption.",
   description:
-    "Here I share my learning notes on Linux, HTML, and Kubernetes, flavoured with some personal reflections and documentation showcases.",
+    "Here I share my learning notes on Kubernetes, Linux, HTML and CSS, flavoured with some personal reflections and documentation showcases.",
   avatar: "../assets/bloomfolio.png",
   location: "🇨🇳 Hangzhou, China",
   email: "hello@example.com",
