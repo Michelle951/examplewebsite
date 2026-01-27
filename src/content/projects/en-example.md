@@ -6,23 +6,18 @@ startDate: "2025-11-09"
 skills: ["Kubernetes", "Container Image", "Appliaction Deployment"]
 ---
 
-[Kubernetes](https://kubernetes.io/docs/home/) is a production‑grade container orchestration system that automates deployment, scaling, and management of containerized applications.It runs on cloud providers or on‑premises, integrates with container runtimes (containerd, CRI‑O, etc.), and has a rich ecosystem (Helm, Operators, Ingress controllers, CNI plugins, Prometheus, etc.). Before using Kubernetes, applications must be packaged as container images and a cluster provisioned — the following section covers preparing a container image.
+[Kubernetes](https://kubernetes.io/docs/home/) is a production‑grade container orchestration system that automates deployment, scaling, and management of containerized applications.It runs on cloud providers or on‑premises, integrates with container runtimes (containerd, CRI‑O, etc.), and has a rich ecosystem (Helm, Operators, Ingress controllers, CNI plugins, Prometheus, etc.). In Kubernetes, applications run as images in containers This article will shows you how to make a container image.
 
-## Preparation
+## Prerequisites
 
-Kubernetes(K8s) is designed for managing containers, which encapsulate an application and its dependencies into a portable package, stored as a container image. You can obtain a container image in two ways:
+- Ensure Docker is installed on your system.
+- Prepare application source codes. Use your own codes or clone a public Git project. For example:
 
-- Use any existing images from a public repository like [Docker Hub](https://hub.docker.com/).
-- Build your own image and push it to your online repository with following steps, if you prefer the hardway.
+  `git clone https://github.com/nigelpoulton/qsk-book.git`
 
-Steps to build a container image:
+## Steps:
 
-1. Ensure Docker is installed on your system.
-2. Prepare application source codes. Use your own codes or clone a public Git project. For example:
-
-   `git clone https://github.com/nigelpoulton/qsk-book.git`
-
-3. Add a Dockerfile in the root directory of your codes. A Dockerfile contains commands for building application codes into an image. It is essential for containerization. Here is an example:
+1. Add a Dockerfile in the root directory of your codes. A Dockerfile contains commands for building application codes into an image. It is essential for containerization. Here is an example:
 
    ```bash
    FROM node:current-slim
@@ -39,7 +34,7 @@ Steps to build a container image:
    - EXPOSE: Lists the port that the application will listen on.
    - CMD: Defines the main application process to run when the container starts.
 
-4. Run this command in the directory with the Dockerfile to build the image.
+2. Run this command in the directory with the Dockerfile to build the image.
 
    ```bash
    docker image build -t [your_docker_id]/[your image:version] .
@@ -47,7 +42,7 @@ Steps to build a container image:
 
    Note: Do not miss the period at the end. It indicates the context path, which includes all files in the specified directory. Avoid unnecessary files in this context to prevent slow builds.
 
-5. Upload the image to your image registry.
+3. Upload the image to your image registry.
 
    `docker image push <your_docker_id>/<your_image_name:version>`
 
